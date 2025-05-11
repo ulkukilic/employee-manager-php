@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'classes/Employee.php';
+require_once 'classes/employee.php';
 
 // 1) Form verilerini al ve sanitize et
 $nameRaw      = $_POST['name'] ?? '';
@@ -42,4 +42,4 @@ if (!empty($errors)) {
 $_SESSION['employees'][] = new Employee($name, $email, $salary, $hiredDate);
 header('Location: employees.php');
 exit;
-process.php
+?>
